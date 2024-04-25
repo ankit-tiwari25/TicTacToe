@@ -1,7 +1,7 @@
 package com.project.controller;
 
 import com.project.model.*;
-import com.project.services.WinningStrategy;
+import com.project.services.winningStrategy.WinningStrategy;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ public class GameController {
         return null;
     }
     public void displayBoard(Game game){
-
+        game.getCurrentBoard().dislayBoard();
     }
 
     public GameStatus getGameStatus(Game game){

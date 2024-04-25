@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20bfe1c9-c620-4b79-9371-a8a6af80d2af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/model/Cell.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/model/CellState.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/model/Bot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/project/model/BotDifficultyLevel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/controller/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/controller/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/model/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/model/Cell.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/model/Cell.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/model/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/model/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/model/Move.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/model/Move.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/model/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/model/Player.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

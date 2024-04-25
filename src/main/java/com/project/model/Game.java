@@ -3,7 +3,7 @@ package com.project.model;
 import com.project.exceptions.InvalidBotCountException;
 import com.project.exceptions.InvalidPlayerSizeException;
 import com.project.exceptions.InvalidSymbolSetupException;
-import com.project.services.WinningStrategy;
+import com.project.services.winningStrategy.WinningStrategy;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -20,10 +20,10 @@ public class Game {
     private WinningStrategy winningStrategy;
     private int numberOfSymbols;
 
-    public Game(Board currentBoard, List<Player> players, Player currentPlayer, WinningStrategy winningStrategy) {
+    public Game(Board currentBoard, List<Player> players, WinningStrategy winningStrategy) {
         this.currentBoard = currentBoard;
         this.players = players;
-        this.currentPlayer = currentPlayer;
+        this.currentPlayer = null;
         this.gameStatus = GameStatus.IN_PROGRESS;
         this.moves = new ArrayList<>();
         this.boardStatus = new ArrayList<>();
@@ -102,7 +102,6 @@ public class Game {
         private int dimension;
         private Board currentBoard;
         private List<Player> players;
-        private Player currentPlayer;
         private WinningStrategy winningStrategy;
 
 
@@ -118,11 +117,6 @@ public class Game {
 
         public Builder setPlayers(List<Player> players) {
             this.players = players;
-            return this;
-        }
-
-        public Builder setCurrentPlayer(Player currentPlayer) {
-            this.currentPlayer = currentPlayer;
             return this;
         }
 
@@ -174,8 +168,7 @@ public class Game {
         }
         public Game build(){
             validate();
-            // TODO : return new Game();
-            return null;
+             return new Game(new Board(dimension), players, winningStrategy);
         }
     }
 }
