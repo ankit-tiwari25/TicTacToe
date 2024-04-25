@@ -30,6 +30,9 @@ public class Game {
         this.winningStrategy = winningStrategy;
         this.numberOfSymbols = players.size();
     }
+    public Builder builder(){
+        return new Builder();
+    }
 
     public Board getCurrentBoard() {
         return currentBoard;
@@ -100,12 +103,8 @@ public class Game {
         private Board currentBoard;
         private List<Player> players;
         private Player currentPlayer;
-        private GameStatus gameStatus;
-
-        private List<Move> moves;
-        private List<Board> boardStatus;
         private WinningStrategy winningStrategy;
-        private int numberOfSymbols;
+
 
         public Builder setDimension(int dimension) {
             this.dimension = dimension;
@@ -127,30 +126,13 @@ public class Game {
             return this;
         }
 
-        public Builder setGameStatus(GameStatus gameStatus) {
-            this.gameStatus = gameStatus;
-            return this;
-        }
 
-        public Builder setMoves(List<Move> moves) {
-            this.moves = moves;
-            return this;
-        }
-
-        public Builder setBoardStatus(List<Board> boardStatus) {
-            this.boardStatus = boardStatus;
-            return this;
-        }
 
         public Builder setWinningStrategy(WinningStrategy winningStrategy) {
             this.winningStrategy = winningStrategy;
             return this;
         }
 
-        public Builder setNumberOfSymbols(int numberOfSymbols) {
-            this.numberOfSymbols = numberOfSymbols;
-            return this;
-        }
 
         public  void validateNumberOfPlayers(){
             // N
