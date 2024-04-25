@@ -96,6 +96,7 @@ public class Game {
     }
 
     public  static class Builder{
+        private int dimension;
         private Board currentBoard;
         private List<Player> players;
         private Player currentPlayer;
@@ -105,6 +106,11 @@ public class Game {
         private List<Board> boardStatus;
         private WinningStrategy winningStrategy;
         private int numberOfSymbols;
+
+        public Builder setDimension(int dimension) {
+            this.dimension = dimension;
+            return this;
+        }
 
         public Builder setCurrentBoard(Board currentBoard) {
             this.currentBoard = currentBoard;
@@ -177,6 +183,17 @@ public class Game {
             if(botCount > 1 || botCount < 0){
                 throw  new InvalidBotCountException("Bot count can't be greater than one or less than zero");
             }
+        }
+
+        public void validate(){
+            validateNumberOfPlayers();
+            validatePlayerSymbols();
+            validateBotCount();
+        }
+        public Game build(){
+            validate();
+            // TODO : return new Game();
+            return null;
         }
     }
 }
