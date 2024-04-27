@@ -2,7 +2,7 @@ package com.project.model;
 
 import java.util.Scanner;
 
-public abstract class Player {
+public  class Player {
     private int id;
     private String name;
 
@@ -51,5 +51,19 @@ public abstract class Player {
         return new Move(playedMoveCell, this);
     }
 
-    public abstract Move makeMove();
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }

@@ -4,6 +4,7 @@ import com.project.exceptions.InvalidBotCountException;
 import com.project.exceptions.InvalidPlayerSizeException;
 import com.project.exceptions.InvalidSymbolSetupException;
 import com.project.services.winningStrategy.WinningStrategy;
+import com.project.services.winningStrategy.WinningStrategyName;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -20,7 +21,7 @@ public class Game {
     private WinningStrategy winningStrategy;
     private int numberOfSymbols;
 
-    public Game(Board currentBoard, List<Player> players, WinningStrategy winningStrategy) {
+    public Game(Board currentBoard, List<Player> players, WinningStrategyName winningStrategyName) {
         this.currentBoard = currentBoard;
         this.players = players;
         this.currentPlayer = null;
